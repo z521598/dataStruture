@@ -3,7 +3,7 @@ package com.baidu.sort.common;
 /**
  * Created by langshiquan on 17/4/14.
  */
-public class BetaSourceUtil {
+public class BetaUtil {
     public static int[] mockIntegerSrc() {
         return new int[] {343, 654, 23, 9, 432, 456, 546, 123, 9876, 2, 5, 6, 343, 654};
     }
