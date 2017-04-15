@@ -36,8 +36,8 @@ public class BetaUtil {
 
     public static void printArray(int[] ints) {
         for (int i = 0; i < ints.length; i++) {
-            System.out.println(ints[i]);
+            System.out.print(ints[i] + "   ");
         }
-
+        System.out.println();
     }
 }
