@@ -4,11 +4,11 @@ package com.baidu.sort.common;
  * Created by langshiquan on 17/4/14.
  */
 public class BetaUtil {
-    public static int[] mockIntegerSrc() {
+    public static int[] mockIntArraySrc() {
         return new int[] {343, 654, 23, 9, 432, 456, 546, 123, 9876, 2, 5, 6, 343, 654};
     }
 
-    public static StabBetaObject[] mockStabSrc() {
+    public static StabBetaObject[] mockStabArraySrc() {
         StabBetaObject stab1 = new StabBetaObject(343, "1");
         StabBetaObject stab2 = new StabBetaObject(456, "1");
         StabBetaObject stab3 = new StabBetaObject(343, "2");

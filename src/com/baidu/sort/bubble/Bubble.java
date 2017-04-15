@@ -99,9 +99,7 @@ public class Bubble {
     }
 
     public static void main(String[] args) {
-        int[] numbers = BetaUtil.mockIntegerSrc();
+        int[] numbers = BetaUtil.mockIntArraySrc();
         BetaUtil.printArray(sortV3(numbers));
-        //        StabBetaObject[] stabBetaObjects = BetaUtil.mockStabSrc();
-        //        BetaUtil.printArray(sort(stabBetaObjects));
     }
 }
