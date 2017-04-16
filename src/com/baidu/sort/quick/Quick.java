@@ -37,10 +37,15 @@ public class Quick {
         return array;
     }
 
-    public static void main(String[] args) {
-        int[] numbers = BetaUtil.mockIntArraySrc();
+    public static int[] sort(int[] numbers) {
         int low = 0;
         int high = numbers.length - 1;
-        BetaUtil.printArray(sort(numbers, low, high));
+        sort(numbers, low, high);
+        return numbers;
+    }
+
+    public static void main(String[] args) {
+        int[] numbers = BetaUtil.mockIntArraySrc();
+        BetaUtil.printArray(sort(numbers));
     }
 }
