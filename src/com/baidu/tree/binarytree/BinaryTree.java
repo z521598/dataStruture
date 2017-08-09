@@ -1,5 +1,9 @@
 package com.baidu.tree.binarytree;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
+
 /**
  * Created by Administrator on 2017/8/10.
  */
@@ -46,7 +50,7 @@ public class BinaryTree<T extends Comparable> {
     }
 
     public void displayTree() {
-        preOrder(root,6);
+       inOrder(root,6);
     }
 
     public void find() {
@@ -71,6 +75,29 @@ public class BinaryTree<T extends Comparable> {
             System.out.println();
             i--;
         }
+    }
+
+    // FIXME
+    private  ArrayList printFromTopToBottom(TreeNode root) {
+        ArrayList res = new  ArrayList();
+        Queue<TreeNode> node =  new LinkedList<>();
+        if(root == null){
+            return res;
+        }
+        res.add(root.getData());
+        node.add(root);
+        while(node.size()!=0){
+            root = node.poll();
+            if(root.getLeftNode()!=null){
+                res.add(root.getLeftNode().getData());
+                node.add(root.getLeftNode());
+            }
+            if(root.getRightNode()!=null){
+                res.add(root.getRightNode().getData());
+                node.add(root.getRightNode());
+            }
+        }
+        return res;
     }
 
 

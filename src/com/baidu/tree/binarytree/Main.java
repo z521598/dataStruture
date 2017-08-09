@@ -1,9 +1,14 @@
 package com.baidu.tree.binarytree;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
+
 /**
  * Created by Administrator on 2017/8/8.
  */
 public class Main {
+
     public static void main(String[] args) {
 
         BinaryTree<String> binaryTree = new BinaryTree<>();
@@ -18,5 +23,6 @@ public class Main {
         binaryTree.insert("12");
         binaryTree.insert("12345678");
         binaryTree.displayTree();
+
     }
 }
