@@ -46,7 +46,7 @@ public class BinaryTree<T extends Comparable> {
     }
 
     public void displayTree() {
-        inOrder(root,6);
+        preOrder(root,6);
     }
 
     public void find() {
@@ -58,18 +58,21 @@ public class BinaryTree<T extends Comparable> {
     private void inOrder(TreeNode localRoot,int i) {
         if (localRoot != null) {
             i--;
-            inOrder(localRoot.getLeftNode(),i);//调用自身来遍历左子树
-            for(int j = 0 ;j < i ;j++){
-                System.out.print("-");
-            }
-            System.out.print(localRoot.getData());
-            for(int j = 0 ;j < i ;j++){
-                System.out.print("-");
-            }
+            localRoot.display();
             inOrder(localRoot.getRightNode(),i);//调用自身来遍历右子树
             System.out.println();
         }
     }
+    private void preOrder(TreeNode localRoot,int i) {
+        if (localRoot != null) {
+            localRoot.display();
+            preOrder(localRoot.getLeftNode(),i);//调用自身来遍历左子树
+            preOrder(localRoot.getRightNode(),i);//调用自身来遍历右子树
+            System.out.println();
+            i--;
+        }
+    }
+
 
 
 }

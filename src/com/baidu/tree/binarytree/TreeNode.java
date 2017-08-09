@@ -36,4 +36,7 @@ public class TreeNode<T extends Comparable>{
         this.rightNode = rightNode;
     }
 
+    public void display(){
+        System.out.println(getData().toString());
+    }
 }
